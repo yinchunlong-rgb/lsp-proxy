@@ -146,7 +146,7 @@ that support `textDocument/hover' request.")
 3. target/release directory (./target/release/emacs-lsp-proxy)"
   (let* ((base-dir lsp-proxy--base-dir)
          (exe-name (if (eq system-type 'windows-nt)
-                       "emacs-lsp-proxy.exe"
+                       "emacs-lsp-proxy.cmd"
                      "emacs-lsp-proxy"))
          (candidates (list (executable-find exe-name)
                            (expand-file-name exe-name base-dir)
