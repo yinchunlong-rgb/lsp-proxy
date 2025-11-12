@@ -195,7 +195,7 @@ If the system is not Windows, return the original path."
                (normalized (if (and (not remote-prefix)
                                     (eq system-type 'windows-nt)
                                     (cl-plusp (length retval)))
-                               (w32-long-file-name (substring retval 1))
+                               (w32-long-file-name retval)
                              retval)))
           (concat remote-prefix normalized))
       uri)))
